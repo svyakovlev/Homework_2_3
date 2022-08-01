@@ -4,15 +4,20 @@ public class Hogwards {
     private String name;
     private int magic; //магия
     private int transgression; //трансгрессия
+    private String scool;
 
     public Hogwards(String faculty, String name, int magic, int transgression) {
         this.faculty = faculty;
         this.name = name;
         this.magic = magic;
         this.transgression = transgression;
+        this.scool = "Хогвардс";
     }
 
     public static String compareStudentsByMagic(Hogwards firstStudent, Hogwards secondStudent) {
+        if (firstStudent == null || secondStudent == null) {
+            return "Сравнение невозможно";
+        }
         int firstStudentScore = firstStudent.getMagic();
         int secondStudentScore = secondStudent.getMagic();
         if (firstStudentScore > secondStudentScore) {
@@ -25,11 +30,12 @@ public class Hogwards {
     }
 
     public static String compareStudentsByTransGression(Hogwards firstStudent, Hogwards secondStudent) {
-        int firstStudentScore = firstStudent.getTransgression();
-        int secondStudentScore = secondStudent.getTransgression();
         if (firstStudent == null || secondStudent == null) {
             return "Сравнение невозможно";
-        } else if (firstStudentScore > secondStudentScore) {
+        }
+        int firstStudentScore = firstStudent.getTransgression();
+        int secondStudentScore = secondStudent.getTransgression();
+        if (firstStudentScore > secondStudentScore) {
             return firstStudent.getName() + " обладает бОльшей трансгрессией, чем " + secondStudent.getName();
         } else if (firstStudentScore < secondStudentScore) {
             return secondStudent.getName() + " обладает бОльшей трансгрессией, чем " + firstStudent.getName();

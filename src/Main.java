@@ -18,12 +18,11 @@ public class Main {
         System.out.println(justin);
         System.out.println(zhou);
 
-        System.out.println(Gryffindor.compareStudents(ron, germiona));
-        System.out.println(Slytherin.compareStudents(graham, gregory));
-        System.out.println(Hufflepuff.compareStudents(zachariah, cedric));
-        System.out.println(Ravenclaw.compareStudents(marcus, padma));
+        System.out.println(Service.compareStudents(harry, draco));
 
         System.out.println(Hogwards.compareStudentsByMagic(harry, zhou));
         System.out.println(Hogwards.compareStudentsByTransGression(ron, cedric));
+
+        System.out.println();
     }
 }

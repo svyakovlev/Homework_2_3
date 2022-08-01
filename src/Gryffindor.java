@@ -11,6 +11,11 @@ public class Gryffindor extends Hogwards {
         this.bravery = bravery;
     }
 
+    public static int studentScore(Gryffindor student) {
+        int studentScore = student.nobility + student.honor + student.bravery;
+        return studentScore;
+    }
+
     @Override
     public String toString() {
         return  "факультет " + getFaculty() +
@@ -20,20 +25,6 @@ public class Gryffindor extends Hogwards {
                 ", благородство " + nobility +
                 ", честь " + honor +
                 ", храбость " + bravery;
-    }
-
-    public static String compareStudents(Gryffindor firstStudent, Gryffindor secondStudent) {
-        int firstStudentScore = firstStudent.getMagic() + firstStudent.getTransgression() + firstStudent.nobility + firstStudent.honor + firstStudent.bravery;
-        int secondStudentScore = secondStudent.getMagic() + secondStudent.getTransgression() + secondStudent.nobility + secondStudent.honor + secondStudent.bravery;
-        if (firstStudent == null || secondStudent == null) {
-            return "Сравнение невозможно";
-        } else if (firstStudentScore > secondStudentScore) {
-            return firstStudent.getName() + " лучший Гриффиндорец, чем " + secondStudent.getName();
-        } else if (firstStudentScore < secondStudentScore) {
-            return secondStudent.getName() + " лучший Гриффиндорец, чем " + firstStudent.getName();
-        } else {
-            return secondStudent.getName() + " и " + firstStudent.getName() + " одинаково хорошие Гриффиндорцы";
-        }
     }
 
     public int getNobility() {

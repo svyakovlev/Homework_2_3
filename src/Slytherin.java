@@ -27,20 +27,6 @@ public class Slytherin extends Hogwards {
                 ", жажда власти " + authority;
     }
 
-    public static String compareStudents(Slytherin firstStudent, Slytherin secondStudent) {
-        int firstStudentScore = firstStudent.getMagic() + firstStudent.getTransgression() + firstStudent.trick + firstStudent.decisiveness + firstStudent.ambition + firstStudent.resourcefulness + firstStudent.authority;
-        int secondStudentScore = secondStudent.getMagic() + secondStudent.getTransgression() + secondStudent.trick + secondStudent.decisiveness + secondStudent.ambition + secondStudent.resourcefulness + secondStudent.authority;
-        if (firstStudent == null || secondStudent == null) {
-            return "Сравнение невозможно";
-        } else if (firstStudentScore > secondStudentScore) {
-            return firstStudent.getName() + " лучший Слизеринец, чем " + secondStudent.getName();
-        } else if (firstStudentScore < secondStudentScore) {
-            return secondStudent.getName() + " лучший Слизеринец, чем " + firstStudent.getName();
-        } else {
-            return secondStudent.getName() + " и " + firstStudent.getName() + " одинаково хорошие Слизеринцы";
-        }
-    }
-
     public int getTrick() {
         return trick;
     }

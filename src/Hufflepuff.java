@@ -21,20 +21,6 @@ public class Hufflepuff extends Hogwards{
                 ", честность " + honesty;
     }
 
-    public static String compareStudents(Hufflepuff firstStudent, Hufflepuff secondStudent) {
-        int firstStudentScore = firstStudent.getMagic() + firstStudent.getTransgression() + firstStudent.diligence + firstStudent.loyalty + firstStudent.honesty;
-        int secondStudentScore = secondStudent.getMagic() + secondStudent.getTransgression() + secondStudent.diligence + secondStudent.loyalty + secondStudent.honesty;
-        if (firstStudent == null || secondStudent == null) {
-            return "Сравнение невозможно";
-        } else if (firstStudentScore > secondStudentScore) {
-            return firstStudent.getName() + " лучший Пуффендуец, чем " + secondStudent.getName();
-        } else if (firstStudentScore < secondStudentScore) {
-            return secondStudent.getName() + " лучший Пуффендуец, чем " + firstStudent.getName();
-        } else {
-            return secondStudent.getName() + " и " + firstStudent.getName() + " одинаково хорошие Пуффендуйцы";
-        }
-    }
-
     public int getDiligence() {
         return diligence;
     }
